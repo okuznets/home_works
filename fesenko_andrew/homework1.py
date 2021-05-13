@@ -10,8 +10,8 @@ sex = input('My gender is:') #1 (done)
 about_me_fstring = ('Hello, my name is ' +  name + '. I\'m ' + age + ' and I\'m a ' + sex + '.')    #2 (done)
 print(about_me_fstring)
 
-about_me_fstrin_1 = ('Hello, my name is %s' % name + '. I\'m %s' % age + ' and I\'m a %s' % sex + '.')  #3 (done)
-print(about_me_fstrin_1)
+about_me_fstring_1 = ('Hello, my name is %s' % name + '. I\'m %s' % age + ' and I\'m a %s' % sex + '.')  #3 (done)
+print(about_me_fstring_1)
 
 about_me_fstring_2 = 'Hello, my name is {0}. I\'m {1} and I\'m a {2}.'.format(name, age, sex)    #4 (done)
 print(about_me_fstring_2)
