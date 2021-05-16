@@ -31,6 +31,14 @@ s2 = about_me_fstring[index1+1:index2]
 s3 = about_me_fstring[index2+1:]
 print(f'6: s1=\'{s1}\', s2=\'{s2}\', s3=\'{s3}\'')
 
+#6 - альтернативный метод:
+import re
+string_splitted = re.split('([!|.*])', about_me_fstring)
+s2_1 = string_splitted[0] + string_splitted[1]
+s2_2 = string_splitted[2] + string_splitted[3]
+s2_3 = string_splitted[4] + string_splitted[5]
+# print(s2_1, s2_2, s2_3)
+
 #7
 friend_name = 'Alex'
 friend_age = '24'
