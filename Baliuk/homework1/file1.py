@@ -7,8 +7,7 @@ sex = input('enter your gender')
 about_me_concat = 'Hello! My name is '+ name +'. I\'m '+ age +' and I\'m a '\
 + sex +'.'
 print(about_me_concat)
-about_me_percent = 'Hello! My name is %s. ' % name + 'I\'m %s ' % age + \
-'and I\'m a %s.' % sex
+about_me_percent = 'Hello! My name is %s. I\'m %s and I\'m a %s.' % (name, age, sex)
 print(about_me_percent)
 about_me_format = 'Hello! My name is {}. I\'m {} and I\'m a {}.'.format(name, age, sex)
 print(about_me_format)
@@ -22,11 +21,10 @@ print(str)
 print(str1)
 print(str2)
 
-name1 = 'Nata'
-age1 = 26
-sex1 = 'female'
-about_my_friend = f'Hello! My friend\'s name is {name1}. She\'s {age1} \
-and She\'s a {sex1}.'
+
+about_my_friend = ((((about_me_fstring.replace('My','My friend\'s')).replace('I\'m', \
+'She\'s', 2)).replace(name, 'Nata')).replace(str(age), '26')).replace(sex, 'female')
+
 print(about_my_friend)
 
 print(type(about_me_fstring))
