@@ -14,10 +14,10 @@ print(about_me_format)
 about_me_fstring = f'Hello! My name is {name}. I\'m {age} and I\'m a {sex}.'
 print(about_me_fstring)
 
-str = about_me_fstring.split('.')
-str1 = str[0]
-str2 = str[1]
-print(str)
+str0 = about_me_fstring.split('.')
+str1 = str0[0]
+str2 = str0[1]
+print(str0)
 print(str1)
 print(str2)
 
