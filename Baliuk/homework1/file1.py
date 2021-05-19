@@ -22,8 +22,8 @@ print(str1)
 print(str2)
 
 
-about_my_friend = ((((about_me_fstring.replace('My','My friend\'s')).replace('I\'m', \
-'She\'s', 2)).replace(name, 'Nata')).replace(str(age), '26')).replace(sex, 'female')
+about_my_friend = about_me_fstring.replace('My','My friend\'s').replace('I\'m', \
+'She\'s', 2).replace(name, 'Nata').replace(str(age), '26').replace(sex, 'female')
 
 print(about_my_friend)
 
