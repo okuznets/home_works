@@ -10,9 +10,8 @@ with open('log.txt','a') as log_file,  open('users.txt','r+') as file_reg:
         login = input('Login:')
         password = input('Password:')
         rstring = f'{login} {password}\n'
-        i = 0
         for i in range(len(reg_list)):
-            if str(reg_list[i]) == rstring:
+            if reg_list[i] == rstring:
                 is_ok = 'Y'
                 break
             else:
