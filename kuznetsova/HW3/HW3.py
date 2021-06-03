@@ -1,4 +1,4 @@
-with open('log3.txt','a') as log_file, open('users.txt', 'r+') as file_reg:
+with open('log3.txt','a') as log_file, open('users.txt', 'w+') as file_reg:
     # Создать эмуляцию системы входа и регистрации для пользователей.
     # При запуске программы, пользователя должно спросить проходил ли он регистрацию на нашем ресурсе,
     registration = input('Welcome! Do you have already account? (y/n)\n')
