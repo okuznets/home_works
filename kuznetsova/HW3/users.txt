@@ -1,0 +1,7 @@
+dden 12345
+okuznets 67890
+petya 666
+vasya 333
+igorek 99
+taras 99
+maria 55

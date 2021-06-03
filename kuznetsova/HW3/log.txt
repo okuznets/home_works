@@ -1,0 +1,18 @@
+User creation with login vasya
+Failed login for vasya
+User creation with login igorek
+Failed login for dden
+Failed login for dden
+Failed login for dden
+Failed login for dden
+Failed login for okuznets
+Failed login for dden
+Failed login for dden
+Failed login for dden
+Failed login for dden
+Success login for dden
+User creation with login taras
+Success login for okuznets
+Success login for dden
+Failed login for dden
+User creation with login maria
