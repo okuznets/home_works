@@ -1,7 +1,7 @@
-# Реализуйте шифратор и дешифратор по шифру Цезаря.
-# Спросить пользователя, что он хочет сделать - зашифровать или расшифровать файл.
-# Если зашифровать, попросить у него ввести имя шифруемого файла, имя файла, который мы получим на выходе(зашифрованного) и ключ(ключем будет уроваень сдвига).
-# Если расшифровать, попросить ввести имя зашифрованного файла, имя файла на выходе(расшифрованного) и ключ.
+# Реализуйте шифратор и дешифратор по шифру Цезаря. Спросить пользователя, что он хочет сделать - зашифровать или
+# расшифровать файл. Если зашифровать, попросить у него ввести имя шифруемого файла, имя файла, который мы получим на
+# выходе(зашифрованного) и ключ(ключем будет уроваень сдвига). Если расшифровать, попросить ввести имя зашифрованного
+# файла, имя файла на выходе(расшифрованного) и ключ.
 import string
 
 alphabet_en_low_or = list(string.ascii_lowercase)
@@ -9,23 +9,23 @@ alphabet_en_up_or = list(string.ascii_uppercase)
 alphabet_en_or = alphabet_en_low_or+alphabet_en_up_or
 
 
-def shift_alphabet(shift,flag): # Function is creating alphabet for encryption (flag == '1')  or decryption
-    shift = shift%len(alphabet_en_low_or)
+def shift_alphabet(shift_inp, flag):  # Function is creating alphabet for encryption (flag == '1')  or decryption
+    shift_inp = shift_inp % len(alphabet_en_low_or)
     alphabet_en_low_new = []
     alphabet_en_up_new = []
-    if flag =='1':
-        min_range = -len(alphabet_en_low_or) + shift
-        max_range = shift
+    if flag == '1':
+        min_range = -len(alphabet_en_low_or) + shift_inp
+        max_range = shift_inp
     else:
-        min_range = -shift
-        max_range = len(alphabet_en_low_or) - shift
+        min_range = -shift_inp
+        max_range = len(alphabet_en_low_or) - shift_inp
     for i in range(min_range, max_range):
         alphabet_en_low_new.append(alphabet_en_low_or[i])
         alphabet_en_up_new.append(alphabet_en_up_or[i])
     return alphabet_en_low_new + alphabet_en_up_new
 
 
-def crypto_func(file_inp, file_out): # Function for work with input file
+def crypto_func(file_inp, file_out):  # Function for work with input file
     while True:
         try:
             file_in_gen = (row for row in open(file_inp))
@@ -40,7 +40,7 @@ def crypto_func(file_inp, file_out): # Function for work with input file
                 for i in str:
                     try:
                         str_new += shift_alphabet(shift, choice)[alphabet_en_or.index(i)]
-                    except Exception:
+                    except ValueError:
                         str_new += i
             except StopIteration:
                 print(f'Result is completed in {file_out}')
@@ -53,14 +53,14 @@ while True:
     if choice == '1' or choice == '2':
         inp_file = input('Enter the name of original file:\n')
         out_file = input('Enter the name of resulted file:\n')
-        shift = input('Enter a key for your code (int):')
+        shift_val = input('Enter a key for your code (int):')
         while True:
             try:
-                shift = int(shift)
+                shift = int(shift_val)
                 crypto_func(inp_file, out_file)
                 break
             except ValueError:
-                shift = input(f'Your key {shift} is not int! Please enter correct key:')
+                shift_val = input(f'Your key {shift_val} is not int! Please enter correct key:')
         break
     else:
         print('Please make correct choice!')
